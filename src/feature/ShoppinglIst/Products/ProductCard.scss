@@ -1,0 +1,60 @@
+// ProductCard.scss
+.product-card {
+  font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Helvetica, Arial, sans-serif;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+
+  width: 100vw; // Sets the width to be 100% of the viewport width
+  box-sizing: border-box; // Ensures padding and borders are included in the total width and height
+
+  background-color: #fafafa; /* Very light grey */
+  border-radius: 15px; // Optional: Apple-like rounded corners
+  padding: 20px; // Add some padding around the content
+
+  // Use this for hover effect over links or buttons
+  a:hover,
+  button:hover {
+    text-decoration: none; // No underline on hover
+    color: #0070c9; // Apple's link hover color
+  }
+
+  .product-title {
+    font-size: 2rem; // Larger font size for the title
+    font-weight: bold;
+    margin-bottom: 20px; // Spacing between title and image
+  }
+
+  .product-image-container {
+    margin: 0 auto; // Center the image container
+
+    .product-image {
+      mix-blend-mode: multiply; /* This will only work if the image background matches the color it's blending with */
+
+      height: auto;
+      width: 400px;
+      transition: transform 0.5s ease;
+    }
+  }
+
+  .product-description {
+    font-size: 30px;
+    color: #333; // Dark color for high contrast
+    font-weight: 300; // Normal font weight
+    margin-top: 10px; // Spacing between image and description
+    line-height: 1.6; // Apple-like line height for readability
+    margin-top: -20px;
+  }
+  .product-learnMore {
+    display: inline-block;
+    margin-top: 10px;
+    color: #0070c9; /* Adjust the color as needed */
+    text-decoration: none;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  .product-learnMore:hover {
+    text-decoration: underline;
+  }
+}
