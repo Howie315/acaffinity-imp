@@ -5,14 +5,31 @@ import "./ProductPage.scss";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick"; // Import the Slider component
+import { useNavigate } from "react-router-dom";
 
 const ProductPage = () => {
 	const { productId } = useParams();
 	const product = productsData.find((p) => p.id === parseInt(productId, 10));
+	const navigate = useNavigate();
 
 	if (!product) {
 		return <div>Product not found</div>;
 	}
+
+	const handleBuyClick = () => {
+		// Based on the product ID, navigate to the specific purchase page
+		switch (product.id) {
+			case 1:
+				navigate(`/purchase/waterSprayer`); // Assuming this is the route for the Water Sprayer purchase
+				break;
+			case 2:
+				navigate(`/purchase/meterKit`); // Assuming this is the route for the Meter Kit purchase
+				break;
+			// Add more cases as needed for different products
+			default:
+				navigate(`/purchase/${product.id}`);
+		}
+	};
 
 	const imagesToDisplay = [...product.additionalImages];
 
@@ -41,7 +58,9 @@ const ProductPage = () => {
 					className="productPage__image"
 				/>
 			</div>
-			<button className="buy">Buy</button>
+			<button className="buy" onClick={handleBuyClick}>
+				Buy
+			</button>
 			<p className="price"> {product.price}</p>
 
 			<p className="Highlights">Get the highlights.</p>
