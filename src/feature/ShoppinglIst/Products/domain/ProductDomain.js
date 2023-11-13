@@ -19,7 +19,7 @@ export const productsData = [
   new Product(
     1,
     "AUTOMATIC WATER SPRAYER",
-    "Mind-blowing.Head-turning",
+    "Mind-blowing. Head-turning",
     waterSprayer,
     "/products/1" // Path to the detail page of this product
   ),
