@@ -30,24 +30,23 @@
   }
 }
 
-@keyframes revolvePop {
+@keyframes popIn {
   0% {
-    transform: rotateY(90deg) scale(0);
+    transform: scale(0.9) rotateY(30deg);
     opacity: 0;
   }
-  80% {
-    transform: rotateY(0deg) scale(1.1);
-    opacity: 1;
-  }
   100% {
-    transform: rotateY(0deg) scale(1);
+    transform: scale(1) rotateY(0deg);
+    opacity: 1;
   }
 }
 
 .productPage__imageContainer {
   // ... other styles
-  perspective: 1000px; // Required to get the 3D effect
-  animation: revolvePop 1.5s ease-out forwards;
+  max-width: 450px;
+  margin: auto;
+  overflow: hidden;
+  animation: popIn 1s ease-out forwards;
 }
 
 .productPage__description {
@@ -59,18 +58,73 @@
   margin-top: -20px;
 }
 
-.productPage__learnMoreBtn {
+.buy {
+  font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Helvetica, Arial, sans-serif;
   display: inline-block;
-  background-color: #0071e3;
+  background-color: #a1a1a1;
   color: white;
-  padding: 10px 20px;
-  border-radius: 20px;
+  padding: 10px 20px; /* Apple's buttons are not too padded */
+  border: none; /* No border */
+  border-radius: 20px; /* Rounded corners */
   text-decoration: none;
-  font-size: 1rem;
+  font-size: 18px; /* Defined font size */
+  font-weight: 600; /* Semi-bold font weight for legibility */
   margin-top: 20px;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease; /* Smooth transition for background color */
+  outline: none; /* No outline */
+  cursor: pointer; /* Pointer cursor on hover */
 
   &:hover {
-    background-color: darken(#0071e3, 10%);
+    background-image: linear-gradient(
+      180deg,
+      #929292,
+      #6e6e6e
+    ); /* Slightly darker grey gradient on hover */
   }
+
+  &:active {
+    background-image: linear-gradient(
+      180deg,
+      #6e6e6e,
+      #929292
+    ); /* Inverted gradient for click effect */
+  }
+}
+
+.Highlights {
+  font-size: 56px;
+  line-height: 1.0714285714;
+  font-weight: 600;
+  letter-spacing: -0.005em;
+  font-family: SF Pro Display, SF Pro Icons, Helvetica Neue, Helvetica, Arial,
+    sans-serif;
+  text-align: left;
+}
+.productPage__imageContainer2 {
+  border: 2px solid #e1e1e1; /* Light grey border */
+  border-radius: 20px; /* Rounded corners for the border */
+  overflow: hidden; /* Hide overflow */
+  display: flex; /* Use flexbox for centering */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  height: 700px; /* Set a fixed height */
+  width: 1200px;
+}
+
+.productPage__image2 {
+  width: 100%; /* Width of image is 100% of its container */
+  height: 100%; /* Height of image is 100% of its container */
+  object-fit: stretch; /* Cover the container while keeping aspect ratio */
+}
+.productPage__slide {
+}
+.price {
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: -0.022em;
+  font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Helvetica, Arial, sans-serif;
+  background-color: var(--sk-body-background-color, rgb(255, 255, 255));
+  font-weight: 600;
 }
