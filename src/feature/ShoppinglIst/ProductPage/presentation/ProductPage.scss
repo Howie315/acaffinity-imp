@@ -1,130 +1,130 @@
 .productPage {
-  text-align: center;
-  padding: 50px;
+	text-align: center;
+	padding: 50px;
 
-  font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI",
-    Helvetica, Arial, sans-serif;
+	font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI",
+		Helvetica, Arial, sans-serif;
 }
 
 .productPage__title {
-  font-size: 2rem;
+	font-size: 2rem;
 
-  margin-bottom: 20px;
-  font-weight: 500; // Normal font weight
+	margin-bottom: 20px;
+	font-weight: 500; // Normal font weight
 }
 
 .productPage__imageContainer {
-  max-width: 450px;
-  margin: auto;
-  overflow: hidden;
-  mix-blend-mode: multiply; /* This will only work if the image background matches the color it's blending with */
+	max-width: 450px;
+	margin: auto;
+	overflow: hidden;
+	mix-blend-mode: multiply; /* This will only work if the image background matches the color it's blending with */
 }
 
 .productPage__image {
-  width: 100%;
-  height: auto;
-  transition: transform 0.5s ease-in-out;
-  animation: fadeInScaleUp 0.7s ease-out forwards;
-  &:hover {
-    transform: scale(1.05);
-  }
+	width: 100%;
+	height: auto;
+	transition: transform 0.5s ease-in-out;
+	animation: fadeInScaleUp 0.7s ease-out forwards;
+	&:hover {
+		transform: scale(1.05);
+	}
 }
 
 @keyframes popIn {
-  0% {
-    transform: scale(0.9) rotateY(30deg);
-    opacity: 0;
-  }
-  100% {
-    transform: scale(1) rotateY(0deg);
-    opacity: 1;
-  }
+	0% {
+		transform: scale(0.9) rotateY(30deg);
+		opacity: 0;
+	}
+	100% {
+		transform: scale(1) rotateY(0deg);
+		opacity: 1;
+	}
 }
 
 .productPage__imageContainer {
-  // ... other styles
-  max-width: 450px;
-  margin: auto;
-  overflow: hidden;
-  animation: popIn 1s ease-out forwards;
+	// ... other styles
+	max-width: 450px;
+	margin: auto;
+	overflow: hidden;
+	animation: popIn 1s ease-out forwards;
 }
 
 .productPage__description {
-  font-size: 50px;
-  color: #333; // Dark color for high contrast
-  font-weight: 650; // Normal font weight
-  margin-top: 10px; // Spacing between image and description
-  line-height: 1.6; // Apple-like line height for readability
-  margin-top: -20px;
+	font-size: 50px;
+	color: #333; // Dark color for high contrast
+	font-weight: 650; // Normal font weight
+	margin-top: 10px; // Spacing between image and description
+	line-height: 1.6; // Apple-like line height for readability
+	margin-top: -20px;
 }
 
 .buy {
-  font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI",
-    Helvetica, Arial, sans-serif;
-  display: inline-block;
-  background-color: #a1a1a1;
-  color: white;
-  padding: 10px 20px; /* Apple's buttons are not too padded */
-  border: none; /* No border */
-  border-radius: 20px; /* Rounded corners */
-  text-decoration: none;
-  font-size: 18px; /* Defined font size */
-  font-weight: 600; /* Semi-bold font weight for legibility */
-  margin-top: 20px;
-  transition: background-color 0.3s ease; /* Smooth transition for background color */
-  outline: none; /* No outline */
-  cursor: pointer; /* Pointer cursor on hover */
+	font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI",
+		Helvetica, Arial, sans-serif;
+	display: inline-block;
+	background-color: #a1a1a1;
+	color: white;
+	padding: 10px 20px; /* Apple's buttons are not too padded */
+	border: none; /* No border */
+	border-radius: 20px; /* Rounded corners */
+	text-decoration: none;
+	font-size: 18px; /* Defined font size */
+	font-weight: 600; /* Semi-bold font weight for legibility */
+	margin-top: 20px;
+	transition: background-color 0.3s ease; /* Smooth transition for background color */
+	outline: none; /* No outline */
+	cursor: pointer; /* Pointer cursor on hover */
 
-  &:hover {
-    background-image: linear-gradient(
-      180deg,
-      #929292,
-      #6e6e6e
-    ); /* Slightly darker grey gradient on hover */
-  }
+	&:hover {
+		background-image: linear-gradient(
+			180deg,
+			#929292,
+			#6e6e6e
+		); /* Slightly darker grey gradient on hover */
+	}
 
-  &:active {
-    background-image: linear-gradient(
-      180deg,
-      #6e6e6e,
-      #929292
-    ); /* Inverted gradient for click effect */
-  }
+	&:active {
+		background-image: linear-gradient(
+			180deg,
+			#6e6e6e,
+			#929292
+		); /* Inverted gradient for click effect */
+	}
 }
 
 .Highlights {
-  font-size: 56px;
-  line-height: 1.0714285714;
-  font-weight: 600;
-  letter-spacing: -0.005em;
-  font-family: SF Pro Display, SF Pro Icons, Helvetica Neue, Helvetica, Arial,
-    sans-serif;
-  text-align: left;
+	font-size: 56px;
+	line-height: 1.0714285714;
+	font-weight: 600;
+	letter-spacing: -0.005em;
+	font-family: SF Pro Display, SF Pro Icons, Helvetica Neue, Helvetica, Arial,
+		sans-serif;
+	text-align: left;
 }
 .productPage__imageContainer2 {
-  border: 2px solid #e1e1e1; /* Light grey border */
-  border-radius: 20px; /* Rounded corners for the border */
-  overflow: hidden; /* Hide overflow */
-  display: flex; /* Use flexbox for centering */
-  justify-content: center; /* Center horizontally */
-  align-items: center; /* Center vertically */
-  height: 700px; /* Set a fixed height */
-  width: 1200px;
+	border: 2px solid #e1e1e1; /* Light grey border */
+	border-radius: 20px; /* Rounded corners for the border */
+	overflow: hidden; /* Hide overflow */
+	display: flex; /* Use flexbox for centering */
+	justify-content: center; /* Center horizontally */
+	align-items: center; /* Center vertically */
+	height: 600px; /* Set a fixed height */
+	width: 1100px;
 }
 
 .productPage__image2 {
-  width: 100%; /* Width of image is 100% of its container */
-  height: 100%; /* Height of image is 100% of its container */
-  object-fit: stretch; /* Cover the container while keeping aspect ratio */
+	width: 100%; /* Width of image is 100% of its container */
+	height: 100%; /* Height of image is 100% of its container */
+	object-fit: fit; /* Cover the container while keeping aspect ratio */
 }
 .productPage__slide {
 }
 .price {
-  font-size: 20px;
-  font-weight: 400;
-  letter-spacing: -0.022em;
-  font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI",
-    Helvetica, Arial, sans-serif;
-  background-color: var(--sk-body-background-color, rgb(255, 255, 255));
-  font-weight: 600;
+	font-size: 20px;
+	font-weight: 400;
+	letter-spacing: -0.022em;
+	font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI",
+		Helvetica, Arial, sans-serif;
+	background-color: var(--sk-body-background-color, rgb(255, 255, 255));
+	font-weight: 600;
 }
