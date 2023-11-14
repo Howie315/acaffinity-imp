@@ -44,7 +44,10 @@ const MeterKit = () => {
 					/>
 					<h2 className="meterKitModelName">PH METER PRO KIT</h2>
 					<ul className="specs">
-						<li>Advanced pH reader for water quality assessment </li>
+						<li>
+							Advanced pH reader for water quality assessment designed to help
+							monitor and maintain proper pH levels.
+						</li>
 						<li>Measures the acidity, alkalinity, and temperature of water</li>
 						<li>
 							Sensor probe delivers instant pH readings with pinpoint accuracy
