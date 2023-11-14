@@ -7,10 +7,12 @@ import WaterSprayer from "./feature/ShoppinglIst/WaterSprayer/presentation/Water
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import MeterKit from "./feature/ShoppinglIst/MeterKit/presentation/MeterKit.";
 import CarbonFilter from "./feature/ShoppinglIst/CarbonFilter/presentation/CarbonFilter";
-
+import ScrollToTop from "./feature/Scroll/ScrollToTop";
 function App() {
 	return (
 		<Router>
+			<ScrollToTop />
+
 			<div className="App">
 				<Navigation />
 				<Routes>
