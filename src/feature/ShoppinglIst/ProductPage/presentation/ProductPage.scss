@@ -32,11 +32,13 @@
 
 .productPage__image.fade-in {
 	opacity: 0;
-	transition: opacity 1s ease-in-out;
+	transform: scale(0.9);
+	transition: opacity 1s ease-in-out, transform 1s ease-in-out;
 }
 
 .productPage__image.fade-in.visible {
 	opacity: 1;
+	transform: scale(1);
 }
 
 @keyframes popIn {
@@ -76,8 +78,11 @@
 	border: none;
 	border-radius: 20px;
 	cursor: pointer;
+
 	&:hover {
 		background-color: darken(#929292, 10%);
+		transform: scale(1.05);
+		transition: background-color 0.3s ease, transform 0.3s ease;
 	}
 }
 
