@@ -3,13 +3,13 @@ import "./CarbonFilter.scss";
 import { useState } from "react";
 
 const CarbonFilter = () => {
-	const [selectedSize, setSelectedSize] = useState("6inches");
+	const [selectedSize, setSelectedSize] = useState("4inches");
 	const [price, setPrice] = useState("79.99");
 
 	// Function to handle size selection and update price
 	const handleSizeSelection = (size) => {
 		setSelectedSize(size);
-		setPrice(size === "6inches" ? "79.99" : "119.99");
+		setPrice(size === "4inches" ? "79.99" : "119.99");
 	};
 
 	return (
@@ -28,20 +28,21 @@ const CarbonFilter = () => {
 
 					<div className="carbonFilter__sizeSelector">
 						<button
-							onClick={() => handleSizeSelection("6inches")}
-							className={`sizeButton ${
-								selectedSize === "6inches" ? "active" : ""
-							}`}
-						>
-							6 inches
-						</button>
-						<button
 							onClick={() => handleSizeSelection("4inches")}
 							className={`sizeButton ${
 								selectedSize === "4inches" ? "active" : ""
 							}`}
 						>
 							4 inches
+						</button>
+
+						<button
+							onClick={() => handleSizeSelection("6inches")}
+							className={`sizeButton ${
+								selectedSize === "6inches" ? "active" : ""
+							}`}
+						>
+							6 inches
 						</button>
 					</div>
 
