@@ -1,19 +1,42 @@
-/* NavBar.css */
 .navbar {
 	background-color: #fff;
 	color: black;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	padding: 0 20px;
+	padding: 0 40px;
 	position: fixed;
 	top: 0;
 	left: 0;
 	right: 0;
-	z-index: 1000;
+
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
 		"Helvetica Neue", Arial, sans-serif;
 	box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1); /* subtle shadow for depth */
+	transition: height 0.3s ease; /* Smooth transition for height change */
+	overflow: hidden; /* To prevent content outside the navbar from being visible during transition */
+}
+
+.hidden-links {
+	max-height: 0;
+	overflow: hidden;
+	top: 0;
+	transition: max-height 0.3s ease;
+
+	width: 100%; /* Full width of the navbar */
+}
+.navbar:hover .hidden-links {
+	max-height: 200px; /* Adjust based on the content size */
+}
+
+.navbar.scrolled {
+	background-color: rgba(
+		255,
+		255,
+		255,
+		0.9
+	); /* Semi-transparent when scrolled */
+	/* Add more style changes on scroll if needed */
 }
 
 .navbar-brand {
@@ -41,6 +64,7 @@
 	font-size: 14px;
 	font-weight: 400;
 	transition: color 0.3s;
+	margin-right: -50px;
 }
 
 .nav-links li a:hover,
@@ -67,11 +91,8 @@
 	width: 100%;
 }
 
-/* Responsive Design - Adjusts navbar for smaller screens */
 @media (max-width: 768px) {
 	.nav-links {
 		display: none;
-		/* You can implement a hamburger menu here */
 	}
-	/* other responsive adjustments */
 }
