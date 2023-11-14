@@ -1,16 +1,40 @@
-import React from "react";
 import { useParams } from "react-router-dom";
 import { productsData } from "../../Products/domain/ProductDomain";
 import "./ProductPage.scss";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import Slider from "react-slick"; // Import the Slider component
+import Slider from "react-slick";
 import { useNavigate } from "react-router-dom";
+import React, { useEffect, useRef } from "react";
 
 const ProductPage = () => {
 	const { productId } = useParams();
 	const product = productsData.find((p) => p.id === parseInt(productId, 10));
 	const navigate = useNavigate();
+	const imageRef = useRef(null);
+
+	useEffect(() => {
+		const observer = new IntersectionObserver(
+			(entries) => {
+				entries.forEach((entry) => {
+					if (entry.isIntersecting) {
+						entry.target.classList.add("visible");
+					}
+				});
+			},
+			{ threshold: 0.5 },
+		);
+
+		if (imageRef.current) {
+			observer.observe(imageRef.current);
+		}
+
+		return () => {
+			if (imageRef.current) {
+				observer.unobserve(imageRef.current);
+			}
+		};
+	}, []);
 
 	if (!product) {
 		return <div>Product not found</div>;
@@ -55,9 +79,10 @@ const ProductPage = () => {
 			<p className="productPage__description">{product.description}</p>
 			<div className="productPage__imageContainer">
 				<img
+					ref={imageRef}
 					src={product.imageUrl}
 					alt={product.name}
-					className="productPage__image"
+					className="productPage__image fade-in"
 				/>
 			</div>
 			<button className="buy" onClick={handleBuyClick}>

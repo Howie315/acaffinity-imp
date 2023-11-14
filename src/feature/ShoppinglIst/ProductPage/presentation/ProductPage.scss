@@ -30,6 +30,15 @@
 	}
 }
 
+.productPage__image.fade-in {
+	opacity: 0;
+	transition: opacity 1s ease-in-out;
+}
+
+.productPage__image.fade-in.visible {
+	opacity: 1;
+}
+
 @keyframes popIn {
 	0% {
 		transform: scale(0.9) rotateY(30deg);
