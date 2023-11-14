@@ -6,6 +6,7 @@ import ProductPage from "./feature/ShoppinglIst/ProductPage/presentation/Product
 import WaterSprayer from "./feature/ShoppinglIst/WaterSprayer/presentation/WaterSprayer";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import MeterKit from "./feature/ShoppinglIst/MeterKit/presentation/MeterKit.";
+import CarbonFilter from "./feature/ShoppinglIst/CarbonFilter/presentation/CarbonFilter";
 
 function App() {
 	return (
@@ -17,6 +18,7 @@ function App() {
 					<Route path="/products/:productId" element={<ProductPage />} />
 					<Route path="/purchase/waterSprayer" element={<WaterSprayer />} />
 					<Route path="/purchase/meterKit" element={<MeterKit />} />
+					<Route path="/purchase/carbonFilter" element={<CarbonFilter />} />
 				</Routes>
 			</div>
 		</Router>

@@ -25,7 +25,9 @@ const ProductPage = () => {
 			case 2:
 				navigate(`/purchase/meterKit`); // Assuming this is the route for the Meter Kit purchase
 				break;
-			// Add more cases as needed for different products
+			case 3:
+				navigate(`/purchase/carbonFilter`);
+				break;
 			default:
 				navigate(`/purchase/${product.id}`);
 		}
